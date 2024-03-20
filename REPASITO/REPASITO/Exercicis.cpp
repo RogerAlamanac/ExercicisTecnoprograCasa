@@ -16,10 +16,11 @@ void ExPointers2() {
 	int myArray[] = { 1, 4, 2, 6 };
 	//myArray = { 4, 4, 2 };
 	int sum = 0;
-	int avr = sum / 4;
+	int avr;
 	for (int elem:myArray) {
 		sum += elem;
 	}
+	avr = sum / 4;
 	std::cout << "MITJANA: " << avr << std::endl;
 
 }
@@ -55,8 +56,17 @@ void ExPointer5() {
 	std::cout << std::endl;
 
 }
+
+void ExPointer6(int* a, int size) {
+	std::cin >> *a;
+	int myArray[] = { 5, 2, 8, 4, 1, 7 };
+	for (int i = 0; i < size; ++i) {
+		if (*a == myArray[i]) std::cout << "Adreça del punter: " << a << std::endl << "Valor del punter: " << a << std::endl;
+		else if(i>=size&&*a != myArray[i]) std::cout << "Adreça del punter: nullptr" << std::endl << "Valor del punter: 0xFFFFFFF" << std::endl;
+	}
+}
 int main() {
 	int a = 9;
 	int b = 4;
-	ExPointer5();
+	ExPointer6(&a, 6);
 }
