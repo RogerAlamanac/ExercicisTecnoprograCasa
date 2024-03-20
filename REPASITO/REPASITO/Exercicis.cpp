@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+//#include <string>
 void ExPointers1() {
 	int a;
 	int b;
@@ -65,8 +66,51 @@ void ExPointer6(int* a, int size) {
 		else if(i>=size&&*a != myArray[i]) std::cout << "Adreça del punter: nullptr" << std::endl << "Valor del punter: 0xFFFFFFF" << std::endl;
 	}
 }
+
+void ExFunctions1(int a) {
+	std::cout << "Hello! Printing value "<< a <<", which is an integer"<< std::endl;
+}
+
+void ExFunctions1(std::string a) {
+	std::cout << "Hello! Printing value " << a << ", which is a string" << std::endl;
+}
+
+void ExFunctions1(float c) {
+	std::cout << "Hello! Printing value " << c << ", which is an integer" << std::endl;
+}
+
+void ExFunctions2() {
+	int size;
+	int sum = 0;
+	int fibo = 1;
+	int result;
+	std::cin >> size;
+	for (int i = 0; i < size; ++i) {
+
+		result = sum + fibo;
+		std::cout << result << std::endl;
+		sum=result;
+	}
+}
+
+void ExFunctions3( int size) {
+	int result = 1;
+	for (int num = 1; num <= size; ++num) {
+		result *= num;
+	}
+	std::cout << result << std::endl;
+}
+
+void ExFunction4() {
+	std::vector<int>myArray = { 4, 5, 1, 6, -1, 7, -1, 8, 9 };
+	std::vector<int>::iterator it = myArray.begin();
+	for (int elem : myArray) {
+		if(elem==-1) elem
+	}
+}
 int main() {
 	int a = 9;
-	int b = 4;
-	ExPointer6(&a, 6);
+	std::string b = "Param1";
+	float c = 3.14;
+	ExFunctions3(5);
 }

@@ -1,2 +1,3 @@
 ﻿  Exercicis.cpp
+C:\Users\RogerAlamanacLlena\Desktop\TecnoprograCasa\ExercicisTecnoprograCasa\REPASITO\REPASITO\Exercicis.cpp(106,10): warning C4305: 'initializing': truncation from 'double' to 'float'
   REPASITO.vcxproj -> C:\Users\RogerAlamanacLlena\Desktop\TecnoprograCasa\ExercicisTecnoprograCasa\REPASITO\x64\Debug\REPASITO.exe
